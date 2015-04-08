@@ -20,7 +20,7 @@
     line-height: 20px;
     overflow: hidden;
 }
-.item .name:after,
+/*.item .name:after,*/
 .item .description:after{
     content: "...";
     position: absolute;
@@ -60,3 +60,35 @@
 .page-header{
     margin-top: 0 !important;
 }
+a[data-organization]{
+    margin: 5px 0;
+}
+/**
+ * Github loading
+ */
+ .context-loader {
+    font-size: 12px;
+    border-top: 1px solid #fff;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin: 0;
+    width: auto;
+    padding: 190px 0 0;
+    font-weight: normal;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding-top: 190px;
+    background: rgba(255,255,255,0.8);
+    z-index: 999;
+    text-align: center;
+    color: #999;
+    display: block;
+ }
+
+ #nprogress{
+    z-index: 9999;
+ }

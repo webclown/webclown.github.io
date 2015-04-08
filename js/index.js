@@ -1,15 +1,18 @@
 // new Konami("http://www.mi.com");
-
 /*
   TODO need to incorporate pagination once we have > 100 repos
 */
 function ajaxOrganization (argument) {
     $('#isotope-container').html('');
     $('#modals').html('');
+    NProgress.start();
+    $('.context-loader').show();
     $.ajax({
         dataType: 'json',
         url: 'https://api.github.com/orgs/'+ argument +'/repos?page=1&per_page=100&callback=?',
         success: function(data) {
+            $('.context-loader').hide();
+            NProgress.done();
             $('.j_title').html(argument);
             // repo name to category for repo mapping
             var repoToCategory = {};
