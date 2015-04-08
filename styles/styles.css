@@ -1,38 +1,62 @@
-.item { 
-  width: 250px; 
-  height: 250px;
-  background-color: #eee;
-  border-style: solid;
-  border-width: 5px;
-  border-color: white;
-  cursor: pointer;
+.item {
+    width: 250px;
+    height: 172px;
+    background-color: #eee;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    cursor: pointer;
+}
+.item .name{
+    word-break: break-all;
+    position: relative;
+    height: 26px;
+    line-height: 26px;
+    overflow: hidden;
+}
+.item .description{
+    position: relative;;
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+}
+.item .name:after,
+.item .description:after{
+    content: "...";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #eee;
+    font-size: 12px;
+    padding-left: 5px;
 }
 
-.main-container {
-  padding-top: 75px;
+.navbar {
+    min-width: 1000px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .hidden {
-  visibility: hidden;
-}
-
-.logo {
-  vertical-align: bottom;
-  margin-right: 10px;
+    visibility: hidden;
 }
 
 .open-source-title {
-  font-size: 17px;
-  font-family: Helvetica;
-  color: white;
+    font-size: 17px;
+    font-family: Helvetica;
+    color: white;
 }
 
 .hero-unit {
-  padding-bottom: 20px;
-  width: 50%;
-  margin: 0 auto;
+    padding-bottom: 20px;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .hero-unit h1 {
-  text-align: center;
+    text-align: center;
+}
+
+.page-header{
+    margin-top: 0 !important;
 }
