@@ -1,4 +1,3 @@
-// new Konami("http://www.mi.com");
 /*
   TODO need to incorporate pagination once we have > 100 repos
 */
@@ -13,7 +12,11 @@ function ajaxOrganization (argument) {
         success: function(data) {
             $('.context-loader').hide();
             NProgress.done();
+            console.log(data);
             $('.j_title').html(argument);
+            
+            var liBlogposts = [];
+            var liRepoCategories = [];
             // repo name to category for repo mapping
             var repoToCategory = {};
             var categories = {};
