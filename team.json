@@ -63,7 +63,8 @@
         { "name" : "mycolorway" },
         { "name" : "then" },
         { "name" : "g0v" },
-        { "name" : "css-modules" }
+        { "name" : "css-modules" },
+        { "name" : "jd-smart-fe" }
     ]
 }
 
