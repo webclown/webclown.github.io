@@ -8,12 +8,12 @@ function ajaxOrganization (argument) {
     $('.context-loader').show();
     $.ajax({
         dataType: 'json',
-        url: 'https://api.github.com/orgs/'+ argument +'/repos?page=1&per_page=100&callback=?',
+        url: 'https://api.github.com/orgs/'+ argument.organization +'/repos?page=1&per_page=100&callback=?',
         success: function(data) {
             $('.context-loader').hide();
             NProgress.done();
             console.log(data);
-            $('.j_title').html(argument);
+            $('.j_title').html('<a href="https://github.com/'+ argument.organization +'" target="_blank">'+ argument.title +'</a>');
             
             var liBlogposts = [];
             var liRepoCategories = [];
@@ -186,7 +186,8 @@ function ajaxOrganization (argument) {
 ajaxOrganization('webclown');
 
 $(document).on('click', '.j_target a', function () {
-    var $organization = $(this).data('organization');
-    ajaxOrganization($organization);
+    var organization = $(this).data('organization');
+    var title = $(this).text();
+    ajaxOrganization({organization, title});
 })
 // $.ajax
