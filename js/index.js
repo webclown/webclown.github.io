@@ -183,7 +183,10 @@ function ajaxOrganization (argument) {
         } // success function
     }); 
 }
-ajaxOrganization('webclown');
+ajaxOrganization({
+  organization: 'webclown'
+  title: 'Webclown.net'
+});
 
 $(document).on('click', '.j_target a', function () {
     var organization = $(this).data('organization');
