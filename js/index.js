@@ -184,7 +184,7 @@ function ajaxOrganization (argument) {
     }); 
 }
 ajaxOrganization({
-  organization: 'webclown'
+  organization: 'webclown',
   title: 'Webclown.net'
 });
 
